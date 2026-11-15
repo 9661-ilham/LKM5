@@ -1,0 +1,7 @@
+# CONTOH BURUK — jangan ditiru. Dipakai di LKM 5 untuk perbandingan.
+FROM python:latest
+WORKDIR /app
+COPY . .
+ENV DB_PASSWORD=rahasia123
+RUN pip install -r requirements.txt
+CMD uvicorn app:app --host 0.0.0.0 --port 8000
